@@ -1,0 +1,45 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.post {
+  display: flex;
+  width: 60vw;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.post-title {
+  color: cornflowerblue;
+  font-size: x-large;
+  justify-content: left;
+}
+
+.post-author {
+  color: cadetblue;
+  font-size: large;
+  justify-content: right;
+}
+
+.post-body {
+  padding: 20px;
+  color: darkgoldenrod;
+  font-family: monospace;
+  font-size: larger;
+  text-align: justify;
+}
+
+.delete-post button {
+  background-color: red;
+  padding: 10px;
+  border: none;
+  color: white;
+}
