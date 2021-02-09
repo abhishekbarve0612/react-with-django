@@ -21,12 +21,15 @@
   color: cornflowerblue;
   font-size: x-large;
   justify-content: left;
+  flex-grow: 4;
 }
 
 .post-author {
   color: cadetblue;
   font-size: large;
   justify-content: right;
+  text-align: right;
+  flex-grow: 1;
 }
 
 .post-body {
@@ -37,9 +40,58 @@
   text-align: justify;
 }
 
+.delete-post {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
 .delete-post button {
   background-color: red;
   padding: 10px;
   border: none;
   color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.add-post {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-post label {
+  text-align: left;
+  justify-content: left;
+  padding: 10px;
+  font-family: monospace;
+}
+
+.add-post input,
+.add-post textarea {
+  padding: 20px;
+  margin: 10px;
+  border: none;
+  background-color: lightgreen;
+  width: 20vw;
+}
+.add-post button {
+  padding: 10px;
+  margin: 10px;
+  background-color: darksalmon;
+  color: white;
+  font-size: larger;
+  border: none;
+}
+
+.add-post button:hover {
+  color: darkviolet;
+  background-color: lightseagreen;
 }

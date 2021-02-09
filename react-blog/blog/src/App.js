@@ -1,24 +1,32 @@
-import {useState} from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import NavBar from './Header/NavBar';
 import Home from './Main/Home';
 import './App.css';
+import NewPost from './Main/NewPost';
+import DetailPost from './Main/DetailPost';
 
 function App() {
-  const [name, setName] = useState("Abhishek");
-  function handleClick(){
-    setName("Abhi Barve")
-    console.log(name);
-  }
+  
 
   return (
+    <Router>
     <div className="App">
       <NavBar/>
       <div className="content">
-        <Home/>
-        <h2>Owner: {name}</h2>
-        <button onClick={handleClick}>Click Me</button>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/new-post">
+            <NewPost />
+          </Route>
+          <Route path="/post/:id">
+            <DetailPost />
+          </Route>
+        </Switch>
       </div>
     </div>
+    </Router>
   );
 }
 
